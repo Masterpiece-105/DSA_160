@@ -24,7 +24,8 @@ public class MaxProfitRec {
     }
 
     public static void main(String[] arg) {
-        int[] prices = {100, 180, 260, 310, 40, 535, 695};
+       //  int[] prices = {100, 180, 260, 310, 40, 535, 695};
+        int[] prices = {7, 10, 1, 3, 6, 9, 2};
         System.out.println(maxProfitRec(prices, 0, prices.length -1));
     }
 
