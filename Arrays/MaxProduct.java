@@ -2,14 +2,31 @@ package GFG160.Arrays;
 
 public class MaxProduct {
     public static int maxProduct(int[] arr) {
-        int res = arr[0];
-        int maxProduct = arr[0];
+        int n = arr.length;
+        int maxProd = Integer.MIN_VALUE;
 
-        for (int i = 1; i < arr.length; i++) {
-            maxProduct = Math.max(maxProduct * arr[i], arr[i]);
-            res = Math.max(res, maxProduct);
+        // store product left to right
+        int leftToRight = 1;
+
+        // store product right to right
+        int rightTOLeft = 1;
+
+        for (int i = 0; i < n; i++){
+            if (leftToRight == 0)
+                leftToRight = 1;
+            if (rightTOLeft == 0)
+                rightTOLeft = 1;
+
+            // calculate the product from left index to right
+            leftToRight *= arr[i];
+
+            // calculate the product from right index to left
+            int j = n - i -1;
+            rightTOLeft *= arr[j];
+            maxProd = Math.max(leftToRight, Math.max(rightTOLeft, maxProd));
+
         }
-        return res;
+        return maxProd;
     }
 
     public static void main(String[] args) {
