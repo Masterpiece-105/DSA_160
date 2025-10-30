@@ -15,7 +15,7 @@ public class MinChar {
         return true;
     }
     static int minChar(String s){
-        int cnt = 0;
+        int cnt = 1;
         int i = s.length() -1;
         while(i >= 0 && !isPalindrome(s,0, i)){
             i--;
