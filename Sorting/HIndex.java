@@ -16,7 +16,9 @@ public class HIndex {
     }
 
     public static void main(String[] args) {
-        int[] citations = {6, 0, 3, 5, 3};
+//        int[] citations = {6, 0, 3, 5, 3};
+        int[] citations = {5,4,5, 5, 0, 0};
+
         System.out.println(hIndex(citations));
     }
 }
