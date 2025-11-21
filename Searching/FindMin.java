@@ -10,9 +10,7 @@ public class FindMin {
         for (int i = 1; i < arr.length - 1; i++) {
             res = Math.min(res, arr[i]);
         }
-
         return res;
-
     }
 
     public static void main(String[] args) {
